@@ -1,63 +1,43 @@
 Employee Management REST API
-📌 Project Overview
+ Project Overview
 
 This project is a secure RESTful API built using Django REST Framework to manage employees in a company.
 It supports CRUD operations, JWT authentication, validation, filtering, pagination, and unit testing, following REST best practices.
-
 This project was developed as part of a Python Backend Developer Hiring Assignment.
 
-🚀 Features
+Features
 
 JWT-based authentication (SimpleJWT)
-
 Secure employee CRUD operations
-
 Email and name validation
-
 Filtering by department and role
-
 Pagination (10 records per page)
-
 Proper HTTP status codes
-
 Unit tests for all endpoints
-
 PostgreSQL database support
 
-🛠️ Technology Stack
+Technology Stack
 
 Python 3.x
-
-Django
-
 Django REST Framework
-
 PostgreSQL
-
 JWT Authentication (SimpleJWT)
-
 Postman (API Testing)
 
 🔐 Authentication
 
 JWT (JSON Web Token) authentication is implemented using djangorestframework-simplejwt.
-
 All employee endpoints are protected and require a valid access token.
 
 🔑 Obtain Token
 POST /api/token/
 
-
 Request Body
-
 {
   "username": "your_username",
   "password": "your_password"
 }
-
-
 Response
-
 {
   "refresh": "refresh_token",
   "access": "access_token"
@@ -87,11 +67,8 @@ date_joined	Auto-generated
 ✅ Validation Rules
 
 Name cannot be empty
-
 Email must be valid and unique
-
 Duplicate email → 400 Bad Request
-
 Invalid ID → 404 Not Found
 
 ⚠️ HTTP Status Codes
@@ -108,31 +85,20 @@ GET /api/employees/?department=HR
 GET /api/employees/?role=Manager
 
 📄 Pagination
-
 Pagination is enabled globally:
-
 Page size: 10 records
-
 GET /api/employees/?page=2
 
 🧪 Testing
-
 Unit tests are written using APITestCase and cover:
-
 Authentication
-
 Employee creation
-
 Duplicate email validation
-
 Retrieval errors (404)
-
 Deletion
-
 Protected endpoint access
 
 Run tests:
-
 python manage.py test employees
 
 ▶️ Run Project Locally
@@ -162,13 +128,9 @@ python manage.py createsuperuser
 python manage.py runserver
 
 📬 Postman Testing
-
 JWT Login
-
 Employee CRUD
-
 Filtering & Pagination
-
 Error handling
 
 (Postman screenshots and collection are attached in documentation.)
